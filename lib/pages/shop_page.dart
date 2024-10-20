@@ -29,16 +29,16 @@ class _ShopPageState extends State<ShopPage> {
 
             const SizedBox(height: 25),
 
-            // List of coffee
+            // List of coffee items
             Expanded(
               child: Consumer<CoffeeShop>(builder: (context, value, child) {
                 return ListView.builder(
                   itemCount: value.coffeeList.length,
                   itemBuilder: (context, index) {
-                    // Get individual coffee
+                    // Get individual coffee item
                     Coffee coffee = value.coffeeList[index];
 
-                    // Return coffee tile
+                    // Return coffee tile for each coffee item
                     return CoffeeTile(
                       coffee: coffee,
                       icon: const Icon(Icons.add),
